@@ -1,4 +1,5 @@
-from wordcloud import WordCloud, STOPWORD
+from wordcloud import WordCloud, STOPWORDS
+
 with open('Course-Descriptions.txt', 'r') as fh:
     filedata = fh.read()
 
