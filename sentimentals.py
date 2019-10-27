@@ -1,5 +1,5 @@
 
 
 with open('Movie-Reviews.txt', 'r') as fh:
-    reviews = fh.read()
+    reviews = fh.readlines()
 print(reviews[:2])
