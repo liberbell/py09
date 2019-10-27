@@ -6,4 +6,4 @@ with open('Course-Descriptions.txt', 'r') as fh:
 print('File data sample: ', filedata[:200])
 
 stopwords = set(STOPWORDS)
-wordcloud = WordCloud(stopwords=stopwords, max_words=25, backgroudcolor='white').generate(filedata)
+wordcloud = WordCloud(stopwords=stopwords, max_words=25, backgroud_color='white').generate(filedata)
