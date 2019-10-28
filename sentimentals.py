@@ -19,3 +19,6 @@ for review in reviews:
     values[polarity] = values[polarity] + 1
 
 print('Final summarized count: ', values)
+
+colors = ['Green', 'Blue', 'Red']
+print('\n Pie Representation \n ------------')
