@@ -9,7 +9,7 @@ for review in reviews:
     print('{:40} : {: 01.2f} : {:01.2f}'.format(review[:40], sentiment.polarity, sentiment.subjectivity))
 
 labels = ['Negative', 'Neautral', 'Positive']
-vales = [0, 0, 0]
+values = [0, 0, 0]
 
 for review in reviews:
     sentiment = TextBlob(review)
