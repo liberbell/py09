@@ -1,4 +1,5 @@
 from textblob import TextBlob
+import matplotlib.pyplot as plt
 
 with open('Movie-Reviews.txt', 'r') as fh:
     reviews = fh.readlines()
