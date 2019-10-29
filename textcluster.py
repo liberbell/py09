@@ -22,4 +22,5 @@ for group in set(clusters):
     print('\nGroup: ', group, '\n--------------')
 
     for i in hashtags_df.index:
-        if (clusters[i] == group)
+        if (clusters[i] == group):
+            print(title_list[i])
