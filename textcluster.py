@@ -24,3 +24,12 @@ for group in set(clusters):
     for i in hashtags_df.index:
         if (clusters[i] == group):
             print(title_list[i])
+
+sosd = []
+K = range(1, 15)
+for i in K:
+    km = KMeans(n_clusters=k)
+    km = km.fit(hash_matrix)
+    sosd.append(km.inertia_)
+
+print('Sum of Squared distance: ', sosd)
