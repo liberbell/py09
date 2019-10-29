@@ -9,3 +9,4 @@ hash_list = hashtags_df['HashTags'].tolist()
 title_list = hashtags_df['Course'].tolist()
 
 vectorizer = TfidfVectorizer(stop_words='english')
+hash_matrix = vectorizer.fit_transform(hash_list)
