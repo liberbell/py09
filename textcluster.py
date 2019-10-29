@@ -1,6 +1,7 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
+from matplotlib.pyplot as mpLib
 
 hashtags_df = pd.read_csv('Course-Hashtags.csv')
 print('Sample Hashtag Data: ')
