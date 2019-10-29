@@ -27,7 +27,7 @@ for group in set(clusters):
 
 sosd = []
 K = range(1, 15)
-for i in K:
+for k in K:
     km = KMeans(n_clusters=k)
     km = km.fit(hash_matrix)
     sosd.append(km.inertia_)
