@@ -14,3 +14,12 @@ hash_matrix = vectorizer.fit_transform(hash_list)
 
 print('\n Feature names Identified: \n')
 print(vectorizer.get_feature_names())
+
+kmeans = KMeans(n_clusters=3).fit(hash_matrix)
+clusters = kmeans.labels_
+
+for group in set(clusters):
+    print('\nGroup: ', group, '\n--------------')
+
+    for i in hashtags_df.index:
+        if (clusters[i] == group)
