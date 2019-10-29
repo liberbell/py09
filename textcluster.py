@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 hashtags_df = pd.read_csv('Course-Hashtags.csv')
 print('Sample Hashtag Data: ')
