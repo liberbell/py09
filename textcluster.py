@@ -12,4 +12,4 @@ vectorizer = TfidfVectorizer(stop_words='english')
 hash_matrix = vectorizer.fit_transform(hash_list)
 
 print('n\ Feature names Identified: \n')
-print(vectorizer.get_feature_name())
+print(vectorizer.get_feature_names())
