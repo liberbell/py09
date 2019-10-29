@@ -7,3 +7,5 @@ print(hashtags_df[:2])
 
 hash_list = hashtags_df['HashTags'].tolist()
 title_list = hashtags_df['Course'].tolist()
+
+vectorizer = TfidfVectorizer(stop_words='english')
