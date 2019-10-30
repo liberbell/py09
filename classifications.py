@@ -17,3 +17,8 @@ def customtokenize(str):
     nostop = list(filter(lambda token: token not in stopwords.words('english'), tokens))
     lemmatized = [lemmatizer.lemmatize(word) for word in nostop ]
     return lemmatized
+
+vectorizer = TfidfVectorizer(tokenizer = customtokenize)
+tfidf = vectorizer.fit_transform(descriptions)
+
+print('\n Sample feature name Identified: ', vectorizer.get_feature_names()[:25])
