@@ -34,3 +34,9 @@ for k in K:
     sosd.append(km.inertia_)
 
 print('Sum of Squared distance: ', sosd)
+
+mplib.plot(K, sosd, 'bx-')
+mpLib.xlabel('Cluster Count')
+mpLib.ylabel('Sum of Squared Distances')
+mpLib.title('Optimal Cluster Size')
+mpLib.show()
