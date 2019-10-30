@@ -35,7 +35,7 @@ for k in K:
 
 print('Sum of Squared distance: ', sosd)
 
-mplib.plot(K, sosd, 'bx-')
+mpLib.plot(K, sosd, 'bx-')
 mpLib.xlabel('Cluster Count')
 mpLib.ylabel('Sum of Squared Distances')
 mpLib.title('Optimal Cluster Size')
