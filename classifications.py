@@ -7,9 +7,9 @@ with open('Course-Descriptions.txt', 'r') as fh:
     descriptions = fh.read().splitlines()
 print('Sample course descriptions: ', descriptions[:2])
 
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('punkt')
+# nltk.download('stopwords')
+# nltk.download('wordnet')
+# nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
 
