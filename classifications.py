@@ -9,6 +9,7 @@ print('Sample course descriptions: ', descriptions[:2])
 
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('punkt')
 
 lemmatizer = WordNetLemmatizer()
 
