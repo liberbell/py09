@@ -5,6 +5,17 @@ from sklearn.naive_bayes import MultinomialNB
 with open('Course-Classification.txt', 'r') as fh:
     classifications = fh.read().splitlines()
 
+lemmatizer = WordNetLemmatizer()
+
+def customtokenize(str):
+    tokens = nltk.word_tokenize(str)
+    nostop = list(filter(lambda token: token not in stopwords.words('english'), tokens))
+    lemmatized = [lemmatizer.lemmatize(word) for word in nostop ]
+    return lemmatized
+
+vectorizer = TfidfVectorizer(tokenizer = customtokenize)
+tfidf = vectorizer.fit_transform(descriptions)
+
 le = preprocessing.LabelEncoder()
 le.fit(classifications)
 print('Classes found: ', le.classes_)
