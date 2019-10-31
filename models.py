@@ -5,3 +5,4 @@ with open('Course-Classification.txt', 'r') as fh:
 
 le = preprocessing.LabelEncoder()
 le.fit(classifications)
+print('Classes found: ', le.classes_)
