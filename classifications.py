@@ -23,3 +23,4 @@ vectorizer = TfidfVectorizer(tokenizer = customtokenize)
 tfidf = vectorizer.fit_transform(descriptions)
 
 print('\n Sample feature name Identified: ', vectorizer.get_feature_names()[:25])
+print('\nSize of TFIDF matrix :', tfidf.shape)
