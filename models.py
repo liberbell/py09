@@ -1,6 +1,10 @@
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 with open('Course-Classification.txt', 'r') as fh:
     classifications = fh.read().splitlines()
