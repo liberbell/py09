@@ -1,4 +1,6 @@
 from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+from sklearn.native_bayes import MultinomialNB
 
 with open('Course-Classification.txt', 'r') as fh:
     classifications = fh.read().splitlines()
