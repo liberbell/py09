@@ -9,6 +9,9 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 with open('Course-Classification.txt', 'r') as fh:
     classifications = fh.read().splitlines()
 
+with open('Course-Descriptions.txt', 'r') as fh:
+    descriptions = fh.read().splitlines()
+    
 lemmatizer = WordNetLemmatizer()
 
 def customtokenize(str):
