@@ -5,6 +5,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn import metrics
 
 with open('Course-Classification.txt', 'r') as fh:
     classifications = fh.read().splitlines()
@@ -32,3 +33,8 @@ print('\nClasses converted to integers: ', int_classes)
 
 xtrain, xtest, ytrain, ytest = train_test_split(tfidf, int_classes, random_state=0)
 classifier = MultinomialNB().fit(xtrain, ytrain)
+
+predictions = classifier.predict(xtest)
+print('Confusion Matrix: ')
+print(metrics.confusion_matrix(ytest, predictions))
+print('\n Prediction Accuracy: ', metrics.accuracy_score(ytest, predictions))
