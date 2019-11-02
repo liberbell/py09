@@ -38,3 +38,6 @@ predictions = classifier.predict(xtest)
 print('Confusion Matrix: ')
 print(metrics.confusion_matrix(ytest, predictions))
 print('\n Prediction Accuracy: ', metrics.accuracy_score(ytest, predictions))
+
+print('\n Testing with full Corpus: \n-----------')
+predictions = classifier.predict(tfidf)
