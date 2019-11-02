@@ -1,5 +1,6 @@
 import os
 import nltk
+from nltk.util import ngrams
 
 base_file = open('Course-Descriptions.txt', 'rt')
 raw_text = base_file.read()
