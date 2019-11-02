@@ -15,4 +15,4 @@ token_list4 = [word.lower() for word in token_list3 ]
 
 print('\nSample token list: ', token_list4[:3])
 print('\nTotal tokens: ', len(token_list4))
-conn = sqlite3.connect('memory')
+conn = sqlite3.connect(':memory:')
