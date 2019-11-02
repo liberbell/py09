@@ -1,6 +1,7 @@
 import os
 import nltk
 from nltk.util import ngrams
+import sqlite3
 
 base_file = open('Course-Descriptions.txt', 'rt')
 raw_text = base_file.read()
@@ -14,3 +15,4 @@ token_list4 = [word.lower() for word in token_list3 ]
 
 print('\nSample token list: ', token_list4[:3])
 print('\nTotal tokens: ', len(token_list4))
+conn = sqlite3.connect('memory')
