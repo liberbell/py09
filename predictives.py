@@ -12,3 +12,4 @@ token_list3 = list(filter(lambda token: nltk.tokenize.punkt.PunktToken(token).is
 token_list4 = [word.lower() for word in token_list3 ]
 
 print('\nSample token list: ', token_list4[:3])
+print('\nTotal tokens: ', len(token_list4))
