@@ -18,7 +18,7 @@ print('\nTotal tokens: ', len(token_list4))
 
 conn = sqlite3.connect(':memory:')
 conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
-conn.execute('''CREATE TABLE GRAMS
+conn.execute('''CREATE TABLE NGRAMS
         (FIRST TEXT NOT NULL,
         SECOND TEXT NOT NULL,
         COUNTS INT NOT NULL,
