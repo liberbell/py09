@@ -30,3 +30,4 @@ for i in bigrams:
     insert_str = "INSERT INTO NGRAMS (FIRST, SECOND, COUNTS)
     VALUES ('" + i[0] + "','" + i[1] + "', 1 )
     ON CONFLICT(FIRST, SECOND) DO UPDATE SET COUNTS=COUNTS + 1"
+    conn.execute(insert_str);
