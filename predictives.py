@@ -32,3 +32,5 @@ for i in bigrams:
     conn.execute(insert_str);
 
 cursor = conn.execute("SELECT FIRST, SECOND, COUNTS from NGRAMS LIMIT 5")
+for gram_row in cursor:
+    print('FIRST: ', gram_row[0], 'SECOND: ', gram_row[1], 'COUNT: ', gram_row[2])
