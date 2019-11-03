@@ -22,7 +22,7 @@ conn.execute('''CREATE TABLE GRAMS
         (FIRST TEXT NOT NULL,
         SECOND TEXT NOT NULL,
         COUNTS INT NOT NULL,
-        CONSTRAINT PK_GRAMS PRIMARY (FIRST, SECOND));''')
+        CONSTRAINT PK_GRAMS PRIMARY KEY (FIRST, SECOND));''')
 
 bigrams = ngrams(token_list4, 2)
 for i in bigrams:
