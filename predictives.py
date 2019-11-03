@@ -23,6 +23,10 @@ conn.execute('''CREATE TABLE GRAMS
         (FIRST TEXT NOT NULL,
         SECOND TEXT NOT NULL,
         COUNTS INT NOT NULL,
-        CONSTRAINT PK_GRAMS PRIMARY (FIRST,SECOND));''')
+        CONSTRAINT PK_GRAMS PRIMARY (FIRST, SECOND));''')
 
 bigrams = ngrams(token_list4, 2)
+for i in bigrams:
+    insert_str = "INSERT INTO NGRAMS (FIRST, SECOND, COUNTS)
+    VALUES ('" + i[0] + "','" + i[1] + "', 1 )
+    ON CONFLICT(FIRST, SECOND) DO UPDATE SET COUNTS=COUNTS + 1"
