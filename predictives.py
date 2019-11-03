@@ -15,4 +15,14 @@ token_list4 = [word.lower() for word in token_list3 ]
 
 print('\nSample token list: ', token_list4[:10])
 print('\nTotal tokens: ', len(token_list4))
+
+
 conn = sqlite3.connect(':memory:')
+conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
+conn.execute('''CREATE TABLE GRAMS
+        (FIRST TEXT NOT NULL,
+        SECOND TEXT NOT NULL,
+        COUNTS INT NOT NULL,
+        CONSTRAINT PK_GRAMS PRIMARY (FIRST,SECOND));''')
+
+bigrams = ngrams(token_list4, 2)
