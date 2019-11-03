@@ -16,7 +16,6 @@ token_list4 = [word.lower() for word in token_list3 ]
 print('\nSample token list: ', token_list4[:10])
 print('\nTotal tokens: ', len(token_list4))
 
-
 conn = sqlite3.connect(':memory:')
 conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
 conn.execute('''CREATE TABLE GRAMS
@@ -31,3 +30,5 @@ for i in bigrams:
     VALUES ('" + i[0] + "','" + i[1] + "', 1 )
     ON CONFLICT(FIRST, SECOND) DO UPDATE SET COUNTS=COUNTS + 1"
     conn.execute(insert_str);
+
+cursor = conn.execute("SELECT FIRST, SECOND, COUNTS from NGRAMS LIMIT 5")
