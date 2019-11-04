@@ -56,3 +56,5 @@ def recommended(str):
     for filt_row in cur_filter:
         nextwords.append(filt_row[0])
     return nextwords
+
+print('Next word for data: ', recommended('data'))
