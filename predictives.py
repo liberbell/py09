@@ -17,8 +17,10 @@ token_list3 = list(filter(lambda token: nltk.tokenize.punkt.PunktToken(token).is
 # token_list4 = [word.lower() for word in token_list3 ]
 token_list4=[word.lower() for word in token_list3 ]
 
-print('\nSample token list: ', token_list4[:10])
-print('\nTotal tokens: ', len(token_list4))
+# print('\nSample token list: ', token_list4[:10])
+# print('\nTotal tokens: ', len(token_list4))
+print("\nSample token list : ", token_list4[:10])
+print("\nTotal Tokens : ",len(token_list4))
 
 conn = sqlite3.connect(':memory:')
 # conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
