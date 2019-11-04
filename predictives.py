@@ -17,12 +17,18 @@ print('\nSample token list: ', token_list4[:10])
 print('\nTotal tokens: ', len(token_list4))
 
 conn = sqlite3.connect(':memory:')
+# conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
+# conn.execute('''CREATE TABLE NGRAMS
+#         (FIRST TEXT NOT NULL,
+#         SECOND TEXT NOT NULL,
+#         COUNTS INT NOT NULL,
+#         CONSTRAINT PK_GRAMS PRIMARY KEY (FIRST, SECOND));''')
 conn.execute('''DROP TABLE IF EXISTS NGRAMS''')
 conn.execute('''CREATE TABLE NGRAMS
-        (FIRST TEXT NOT NULL,
-        SECOND TEXT NOT NULL,
-        COUNTS INT NOT NULL,
-        CONSTRAINT PK_GRAMS PRIMARY KEY (FIRST, SECOND));''')
+         (FIRST   TEXT  NOT NULL,
+          SECOND  TEXT  NOT NULL,
+          COUNTS  INT   NOT NULL,
+         CONSTRAINT PK_GRAMS PRIMARY KEY (FIRST,SECOND));''')
 
 bigrams = ngrams(token_list4, 2)
 for i in bigrams:
