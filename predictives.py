@@ -12,8 +12,10 @@ token_list = nltk.word_tokenize(raw_text)
 token_list = nltk.word_tokenize(raw_text)
 # token_list2 = [word.replace('`', '') for word in token_list]
 token_list2 = [word.replace("'", "") for word in token_list ]
+# token_list3 = list(filter(lambda token: nltk.tokenize.punkt.PunktToken(token).is_non_punct, token_list2))
 token_list3 = list(filter(lambda token: nltk.tokenize.punkt.PunktToken(token).is_non_punct, token_list2))
-token_list4 = [word.lower() for word in token_list3 ]
+# token_list4 = [word.lower() for word in token_list3 ]
+token_list4=[word.lower() for word in token_list3 ]
 
 print('\nSample token list: ', token_list4[:10])
 print('\nTotal tokens: ', len(token_list4))
