@@ -58,3 +58,4 @@ def recommended(str):
     return nextwords
 
 print('Next word for data: ', recommended('data'))
+print('\nNext word for Science: ', recommended('science'))
