@@ -48,3 +48,11 @@ for i in bigrams:
 cursor = conn.execute("SELECT FIRST, SECOND, COUNTS from NGRAMS LIMIT 5")
 for gram_row in cursor:
     print('FIRST= ', gram_row[0], 'SECOND: ', gram_row[1], 'COUNT: ', gram_row[2])
+
+def recommended(str):
+    nextwords = []
+    cur_filter = conn.execute("SELECT SECOND from NGRAMS WHERE FIRST='" + str + "' ORDER BY COUNTS DESC")
+
+    for filt_row in cur_filter:
+        nextwords.append(filt_row[0])
+    return nextwords
